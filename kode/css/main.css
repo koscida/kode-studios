@@ -81,6 +81,8 @@ html, body {
 	line-height: 150%;
 	color: #3A3F45;
 	background: url('../images/connect.png');
+	background: url('../images/pixel_weave_1.png');
+	background: url('../images/p4.png');
 }
 
 h1, h2, h3 {
@@ -224,14 +226,21 @@ header .active span:after {
 .head {
 	min-height: 100px;
 }
+.section:nth-of-type(1) .head {
+	background: #58C4B7;
+	background: url(../images/triangle_1.png);
+}
 .section:nth-of-type(2) .head {
 	background: #6298C8;
+	background: url(../images/triangle_2.png);
 }
 .section:nth-of-type(3) .head {
 	background: #6A7CCE;
+	background: url(../images/triangle_3.png);
 }
 .section:nth-of-type(4) .head {
 	background: #7E6BCF;
+	background: url(../images/triangle_4.png);
 }
 .head h2 {
 	line-height: 100px;
@@ -251,7 +260,6 @@ header .active span:after {
 #title {
 	font-family: 'Voltaire', sans-serif;
 	text-align: center;
-	background: #58C4B7;
 	color: black;
 }
 #title h1 {
