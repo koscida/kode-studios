@@ -145,9 +145,9 @@ h4 {
 	color: #58C4B7;
 	font-weight: bold;
 	
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.8);
+	-webkit-text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.8);
+	-moz-text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.8);
 }
 p {
 	margin-bottom: 20px;
@@ -178,6 +178,12 @@ a:hover {
 }
 .hide {
 	display: none;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
 }
 
 
@@ -334,7 +340,7 @@ header .active span:after {
 	line-height: 100px;
 }
 .content {
-	padding: 20px 0;
+	padding-top: 20px;
 }
 
 
@@ -370,45 +376,76 @@ header .active span:after {
 
 
 
-/* ******************** */
+/* **************** */
 /*		work		*/
-/* ******************** */
-#workSection {}
+/* **************** */
+#workSectionContent {
+	min-height: 490px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.project {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+
 .work .preview {
 	position: relative;
-}
-.work .preview:hover {
 	cursor: pointer;
 }
 .work .preview img {
 	width: 360px;
-	height: 180px;
+	height: 220px;
 }
 .work .overlay {
 	position: absolute;
 	top: 0;
 	display: block;
 	width: 360px;
-	height: 180px;
-	background: rgba(255, 255, 255, 0.2);
-	background: none;
+	height: 220px;
 	z-index: 5;
+	opacity: 1;
+	
 }
-.work .preview:hover .overlay {
-	background: none;
+.work .overlayFade {
 	background: rgba(255, 255, 255, 0.2);
+	-webkit-transition: opacity 0.5s ease-out;
 }
-.work .overlay span {
-	display: none;
-	padding: 2px 5px;
+.work .preview:hover .overlayFade {
+	opacity: 0;
+}
+.work .overlayName {
+	background: none;
+	z-index: 6;
+}
+.work .overlayName span {
+	padding: 8px 15px;
 	color: white;
-	margin-top: 152px;
-}
-.work .preview:hover .overlay span {
+	margin-top: 180px;
 	background: rgba(0, 0, 0, 0.2);
 	display: block;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-out;
+}
+.work .preview:hover .overlayName span {
+	opacity: 1;
 }
 
+
+
+.allProjects {
+	float: right;
+}
+	.allProjects.left { float: left; }
+.nextProject {
+	float: right;
+}
 
 
 /* **************** */

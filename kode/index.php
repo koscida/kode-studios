@@ -16,6 +16,10 @@
     <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="js/common.js" type="text/javascript"></script>
     
+    <?php 
+    	include "projects.php"; 
+    ?>
+    
 </head>
 <body>
 	
@@ -105,74 +109,92 @@
 					</div>
 				</div>
 				
-				<div class="content">
-					<div class="container12">
-					
-						<div class="row">
-						
-							<div class="column4 work">
-								<div class="preview">
-									<img src="images/triangle_1.png" />
-									<span class="overlay">
-										<span>Friends of MSV</span>
-									</span>
-								</div>
-							</div>
-							
-							<div class="column4 work">
-								<div class="preview">
-									<img src="images/triangle_2.png" />
-									<span class="overlay">
-										<span>ZOLL Online</span>
-									</span>
-								</div>
-							</div>
-							
-							<div class="column4 work">
-								<div class="preview">
-									<img src="images/triangle_3.png" />
-									<span class="overlay">
-										<span>Arts & Science</span>
-									</span>
-								</div>
-							</div>
-							
-						</div>
-						
-						<div class="row">
-						
-							<div class="column4 work">
-								<div class="preview">
-									<img src="images/triangle_4.png" />
-									<span class="overlay">
-										<span>Webscan App</span>
-									</span>
-								</div>
-							</div>
-							
-							<div class="column4 work">
-								<div class="preview">
-									<img src="images/triangle_1.png" />
-									<span class="overlay">
-										<span>Heard Life</span>
-									</span>
-								</div>
-							</div>
-							
-							<div class="column4 work">
-								<div class="preview">
-									<img src="images/triangle_2.png" />
-									<span class="overlay">
-										<span>USCSA Ski Team</span>
-									</span>
-								</div>
-							</div>
-							
-						</div>
-						
-					</div>
-				</div>
+				<div class="content" id="workSectionContent">
 				
+					<div id="works" class="project">
+						<div class="container12">
+						
+							<?php 
+							foreach($projects as $id => $project) {
+								if( ($id % 3) == 1)
+									echo '<div class="row">';
+								?>
+								<div class="column4 work">
+									<div class="preview" data-id="<?php echo $id; ?>">
+										<img src="<?php echo $project['preview_image']; ?>" />
+										<span class="overlay overlayFade"></span>
+										<span class="overlay overlayName">
+											<span><?php echo $project['preview_name']; ?></span>
+										</span>
+										
+									</div>
+								</div>
+								<?php 
+								if( ($id % 3) == 0)
+									echo '</div>';
+							}
+							?>
+							
+							
+							
+						</div>
+					</div><!-- end of <div id="works"> -->
+					
+					
+						
+					<?php 
+					foreach($projects as $id => $project) {
+						?>
+						<div id="proj1" class="project">
+							<div class="container12">
+						
+								<div class="row">
+									<div class="column10">
+										<h3><?php echo $project['preview_name']; ?></h3>
+									</div>
+									<div class="column2">
+										<img  class="allProjects" src="images/redirect.png" height="40" width="40" />
+									</div>
+								</div>
+							
+								<div class="row">
+									<div class="column6 description">
+										<p><?php echo $project['project_description']; ?></p>
+										<p><a href="<?php echo $project['project_link_url']; ?>"><?php echo $project['project_link_text']; ?></a></p>
+									</div>
+									<div class="column2 skills">
+										<ul>
+											<?php 
+											foreach($project['project_skills'] as $skill) { 
+												echo "<li>$skill</li>";
+											} ?>
+										</ul>
+									</div>
+									<div class="column4 images">
+										<?php 
+											foreach($project['project_images'] as $image) { 
+												echo "<img src='$image' />";
+											} ?>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="column2">
+										<img class="lastProject" src="images/left.png" height="40" width="40" />
+									</div>
+									<div class="column2 prefix8">
+										<img class="nextProject" src="images/right.png" height="40" width="40" />
+									</div>
+								</div>
+								
+							</div>
+						</div>
+							
+						<?php								
+					}
+					?>
+						
+				</div><!-- end of <div class="content"> -->
 			</div>
 			
 			

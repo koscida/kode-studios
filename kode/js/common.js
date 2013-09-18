@@ -11,6 +11,7 @@ $(document).ready(function (){
 		sectionsHeight = {},
 		it = 0,
 		_height = $(window).height(),
+		_width = $(window).width(),
 		currentSection = 0;
 	$('.section').each(function(){
 		sections[it] = $(this).offset().top - 40;
@@ -48,6 +49,41 @@ $(document).ready(function (){
 	$("#brit_phone_number").html("720-270-5003");
 	$("#brit_email").html("brittany@kodestudios.com");
 	
+	
+	
+	/* **************** */
+	/*		work		*/
+	/* **************** */
+	// position projects
+	var projectCount = 0,
+		startPos = {},
+		currentProject = 0;
+	$(".project").each(function(){
+		var l = (_width * projectCount);
+		$(this).css("left", l + "px");
+		startPos[projectCount] = l;
+		projectCount++;
+	});
+	
+	// click scroll
+	$(".preview").click(function(){
+		previewScroll($(this).attr("data-id"));
+	});
+	$(".allProjects").click(function(){
+		previewScroll(0);
+	});
+	$(".nextProject").click(function(){
+		previewScroll(parseInt(currentProject) + 1);
+	});
+	$(".lastProject").click(function(){
+		previewScroll(parseInt(currentProject) - 1);
+	});
+	function previewScroll(position) {
+		$('#workSectionContent').animate({
+			scrollLeft: (startPos[position])
+		}, 1000);
+		currentProject = position;
+	}
 	
 });
 
