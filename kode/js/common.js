@@ -4,7 +4,7 @@ $(document).ready(function (){
 		clearTimeout(doit);
 		doit = setTimeout(sectionHeight, 100);
 	});*/
-	sectionHeight();
+	//sectionHeight();
 	
 	/* navigation */
 	var sections = {},
@@ -45,7 +45,8 @@ $(document).ready(function (){
 	});
 	
 	
-	
+	$("#brit_phone_number").html("720-270-5003");
+	$("#brit_email").html("brittany@kodestudios.com");
 	
 	
 });
