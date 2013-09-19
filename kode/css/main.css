@@ -171,6 +171,12 @@ a:hover {
 	text-transform: none;
 	text-decoration: underline;
 }
+ul {
+	padding-left: 20px;
+}
+li {
+	list-style-type: circle
+}
 
 
 .bold {
