@@ -159,6 +159,9 @@ p, label, input[type=text], textarea {
 	font-weight: 300;
 	line-height: 1.5em;
 }
+	input[type=text], textarea {
+		font-size: 1em;
+	}
 a {
 	text-decoration: none;
 	color: #58C4B7;
@@ -420,7 +423,7 @@ header .active span:after {
 	
 }
 .work .overlayFade {
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.4);
 	-webkit-transition: opacity 0.5s ease-out;
 }
 .work .preview:hover .overlayFade {
@@ -434,7 +437,7 @@ header .active span:after {
 	padding: 8px 15px;
 	color: white;
 	margin-top: 180px;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.6);
 	display: block;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s ease-out;

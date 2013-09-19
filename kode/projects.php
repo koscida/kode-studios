@@ -20,7 +20,7 @@ $projects = array(
 	),
 	2 => array(
 		"preview_name" => "ZOLL Online",
-		"preview_image" => "",
+		"preview_image" => "images/zoll/zoll_last_1.png",
 		
 		"project_description" => "",
 		"project_link_url" => "http://www.zollonline.com",
@@ -35,7 +35,7 @@ $projects = array(
 	),
 	3 => array(
 		"preview_name" => "Arts & Science",
-		"preview_image" => "",
+		"preview_image" => "images/as/checklist_thum.jpg",
 		
 		"project_description" => "",
 		"project_link_url" => "",
@@ -50,7 +50,7 @@ $projects = array(
 	),
 	4 => array(
 		"preview_name" => "Webscan App",
-		"preview_image" => "",
+		"preview_image" => "images/webscan/webscan_thum.jpg",
 		
 		"project_description" => "",
 		"project_link_url" => "",
@@ -64,8 +64,8 @@ $projects = array(
 		),
 	),
 	5 => array(
-		"preview_name" => "Heard Life",
-		"preview_image" => "",
+		"preview_name" => "Herd Life",
+		"preview_image" => "images/herd/places_view.png",
 		
 		"project_description" => "",
 		"project_link_url" => "",
@@ -81,7 +81,7 @@ $projects = array(
 	),
 	6 => array(
 		"preview_name" => "USCSA Ski Team",
-		"preview_image" => "",
+		"preview_image" => "images/uscsa/ski_thum.jpg",
 		
 		"project_description" => "",
 		"project_link_url" => "",
