@@ -15,6 +15,7 @@
     
     <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/tracking.js" type="text/javascript"></script>
     
     <?php 
     	include "projects.php"; 
@@ -161,16 +162,14 @@
 									<div class="column6 description">
 										<p><?php echo $project['project_description']; ?></p>
 										<p><a href="<?php echo $project['project_link_url']; ?>"><?php echo $project['project_link_text']; ?></a></p>
-									</div>
-									<div class="column2 skills">
-										<ul>
+										<ul class="skills">
 											<?php 
 											foreach($project['project_skills'] as $skill) { 
 												echo "<li>$skill</li>";
 											} ?>
 										</ul>
 									</div>
-									<div class="column4 images">
+									<div class="column6 images">
 										<?php 
 											foreach($project['project_images'] as $image) { 
 												echo "<img src='$image' />";
@@ -214,7 +213,9 @@
 								<p>Kode Studios is a web design and development firm, founded by Brittany Kos in 2013 
 								in Boulder, Colorado. Since then Kode has been working on building their web presence by 
 								assisting in local web projects around the comminuty.</p>
-								<p>Kode has a strong commitment to </p>
+								<p>We strive to build beautiful websites, while maintaining a strong focus on our clients's 
+								needs and desires.  We can help you build an online presence, update an existing website, or 
+								start your online brand from scratch.</p>
 							</div>
 						</div>
 						
@@ -223,8 +224,11 @@
 								<img src="images/brit_1.jpg" class="self" />
 							</div>
 							<div class="column10">
-								<p>Brittany has been developing websites professionally since 2010. She worked in indusrty before 
-								starting her own </p>
+								<p>Brittany has been developing websites professionally since 2010. She worked in industry 
+								before branching out on her own and founding Kode.  She has a background in Computer Science 
+								and User Experience as well as an eye for design, which puts her in a unique position as an 
+								all-inclusive web developer and designer. She focuses in PHP, MySQL, Javascript, HTML5, and 
+								CSS3, and also does work with WordPress and Drupal to round out her portfolio. </p>
 							</div>
 							<div class="column4">
 								<h4>Contact</h4>

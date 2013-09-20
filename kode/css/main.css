@@ -424,7 +424,7 @@ header .active span:after {
 }
 .work .overlayFade {
 	background: rgba(255, 255, 255, 0.4);
-	-webkit-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.3s ease-out;
 }
 .work .preview:hover .overlayFade {
 	opacity: 0;
@@ -440,7 +440,7 @@ header .active span:after {
 	background: rgba(0, 0, 0, 0.6);
 	display: block;
 	opacity: 0;
-	-webkit-transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.3s ease-out;
 }
 .work .preview:hover .overlayName span {
 	opacity: 1;
@@ -448,10 +448,12 @@ header .active span:after {
 
 
 
+.project .row:nth-of-type(2) {
+	height: 329px;
+}
 .allProjects {
 	float: right;
 }
-	.allProjects.left { float: left; }
 .nextProject {
 	float: right;
 }
