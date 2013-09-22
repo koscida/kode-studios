@@ -9,13 +9,6 @@
 
     <link href="css/1140.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400|Voltaire' rel='stylesheet' type='text/css'> -->
-    
-    <link href='http://fonts.googleapis.com/css?family=Aldrich|Abel' rel='stylesheet' type='text/css'>
-    
-    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="js/common.js" type="text/javascript"></script>
-    <script src="js/tracking.js" type="text/javascript"></script>
     
     <?php 
     	include "projects.php"; 
@@ -76,21 +69,21 @@
 						
 						<div class="row">
 							<div class="column4 process">
-								<img src="images/documents.png" />
+								<div id="sprite_design" class="sprite"></div>
 								<h4>Design</h4>
 								<p>Design begins with the client's needs and desires, where the scope of the project 
 								begins to be refined</p>
 							</div>
 							
 							<div class="column4 process">
-								<img src="images/arrows_rotated.png" />
+								<div id="sprite_develop" class="sprite"></div>
 								<h4>Develop</h4>
 								<p>Development is a cyclical process, we continually touch base with 
 								our clients to make sure the project is on track</p>
 							</div>
 							
 							<div class="column4 process">
-								<img src="images/monitor.png" />
+								<div id="sprite_deliver" class="sprite"></div>
 								<h4>Deliver</h4>
 								<p>Projects are deployed and work is delivered to the client in a timely manner</p>
 							</div>
@@ -154,7 +147,7 @@
 										<h3><?php echo $project['preview_name']; ?></h3>
 									</div>
 									<div class="column2">
-										<img  class="allProjects" src="images/redirect.png" height="40" width="40" />
+										<div class="allProjects sprite"></div>
 									</div>
 								</div>
 							
@@ -169,20 +162,30 @@
 											} ?>
 										</ul>
 									</div>
-									<div class="column6 images">
-										<?php 
-											foreach($project['project_images'] as $image) { 
-												echo "<img src='$image' />";
-											} ?>
+									<div class="column6">
+										<div class="images">
+											<?php 
+												$imageSelectors = null;
+												$images = null;
+												$it = 1;
+												foreach($project['project_images'] as $image) { 
+													$images[] = '<img src="' . $image . '" id="gallery_image_' . $id . '_' . $it . '" class="gallery_image ' . ($it==1?'active':'') . '" />';
+													$imageSelectors[] = '<div id="selectors_img_' . $id . '_' . $it . '" class="selectors_img ' . ($it==1?'active':'') . '" data-id="' . $id . '" data-it="' . $it . '">' . $it . '</div>';
+													$it++;
+												} 
+												echo '<div class="gallery" id="gallery' . $id . '">' . implode($images) . '</div>';
+												echo '<div class="selectors" id="selectors' . $id . '"><div class="selectorsInner">' . implode($imageSelectors) . '</div></div>';
+											?>
+										</div>
 									</div>
 								</div>
 								
 								<div class="row">
 									<div class="column2">
-										<img class="lastProject" src="images/left.png" height="40" width="40" />
+										<div class="lastProject sprite"></div>
 									</div>
 									<div class="column2 prefix8">
-										<img class="nextProject" src="images/right.png" height="40" width="40" />
+										<div class="nextProject sprite"></div>
 									</div>
 								</div>
 								
@@ -234,8 +237,8 @@
 								<h4>Contact</h4>
 								<p id="brit_phone_number" class="contact_info"></p>
 								<p id="brit_email" class="contact_info"></p>
-								<a href="http://www.linkedin.com/pub/brittany-kos/4a/983/638" class="social"><img src="images/linkedin.png" /></a>
-								<a href="http://www.twitter.com/koscida" class="social"><img src="images/twitter.png" /></a>
+								<a href="http://www.linkedin.com/pub/brittany-kos/4a/983/638" class="social"><span id="sprite_linkedin" class="sprite"></span></a>
+								<a href="http://www.twitter.com/koscida" class="social"><span id="sprite_twitter" class="sprite"></span></a>
 							</div>
 						</div>
 						
@@ -306,6 +309,10 @@
 		</footer>
 		
 	</section>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/tracking.js" type="text/javascript"></script>
 
 </body>
 </html>

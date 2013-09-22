@@ -1,11 +1,4 @@
 $(document).ready(function (){	
-	/*var doit;
-	$(window).resize(function () {
-		clearTimeout(doit);
-		doit = setTimeout(sectionHeight, 100);
-	});*/
-	//sectionHeight();
-	
 	/* navigation */
 	var sections = {},
 		sectionsHeight = {},
@@ -46,6 +39,7 @@ $(document).ready(function (){
 	});
 	
 	
+	/* replace info */
 	$("#brit_phone_number").html("720-270-5003");
 	$("#brit_email").html("brittany@kodestudios.com");
 	
@@ -84,6 +78,21 @@ $(document).ready(function (){
 		}, 1000);
 		currentProject = position;
 	}
+	
+	
+	$(".selectors_img").click(function(){
+		
+		var id = $(this).attr("data-id");
+		var it = $(this).attr("data-it");
+		
+		$("#gallery" + id + " .active").removeClass("active").fadeOut("fast", function(){
+			$("#gallery_image_" + id + "_" + it).addClass("active").fadeIn("fast").css("display","block");;
+		});
+		
+		
+		$("#selectors" + id + " .active").removeClass("active");
+		$("#selectors_img_" + id + "_" + it).addClass("active");
+	});
 	
 });
 

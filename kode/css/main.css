@@ -206,6 +206,11 @@ header {
 }
 
 
+.sprite {
+	background: url(../images/sprites.png);
+}
+
+
 
 
 /* **************** */
@@ -368,11 +373,19 @@ header .active span:after {
 }
 
 .process {}
-.process img {
-	width: 120px;
-	height: 120px;
+.process .sprite {
+	width: 110px;
+	height: 110px;
 	margin: 0 auto;
-	display: block;
+}
+#sprite_design {
+	background-position: 0 0;
+}
+#sprite_develop {
+	background-position: -110px 0;
+}
+#sprite_deliver {
+	background-position: -220px 0;
 }
 .process h4 {
 	text-align: center;
@@ -451,11 +464,66 @@ header .active span:after {
 .project .row:nth-of-type(2) {
 	height: 329px;
 }
+.allProjects, .lastProject, .nextProject {
+	height: 48px;
+	width: 48px;
+}
 .allProjects {
 	float: right;
+	background-position: -93px 118px;
+}
+.lastProject {
+	background-position: -141px 118px;
 }
 .nextProject {
 	float: right;
+	background-position: -189px 118px;
+}
+
+
+.images {
+	width: 100%;
+	height: 100%;
+	
+}
+.images .gallery {
+	height: 300px;
+	margin-bottom: 9px;
+}
+.images .gallery_image {
+	max-height: 100%;
+	max-width: 100%;
+	display: none;
+	margin: auto;
+	text-align: center;
+	
+}
+	.images .gallery_image:first-child { display: block; }
+.selectors {
+	height: 20px;
+	overflow: hidden;
+}
+.selectorsInner {
+	margin: 0 auto;
+	width: auto;
+}
+.selectors .selectors_img {
+	display: inline-block;
+	float: left;
+	background: #bbb;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+	font-size: .6em;
+	height: 20px;
+	width: 20px;
+	margin-right: 10px;
+	cursor: pointer;
+	
+	border-radius: 10px;
+}
+.selectors .selectors_img.active {
+	background: #444;
 }
 
 
@@ -474,9 +542,16 @@ header .active span:after {
 .social {
 	
 }
-.social img {
-	width: 50px;
-	height: 50px;
+.social .sprite {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+}
+#sprite_linkedin {
+	background-position: 1px 118px;
+}
+#sprite_twitter {
+	background-position: -46px 118px;
 }
 
 
