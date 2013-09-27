@@ -105,7 +105,7 @@
 				
 				<div class="content" id="workSectionContent">
 				
-					<div id="works" class="project">
+					<div id="proj0" class="project loaded">
 						<div class="container12">
 						
 							<?php 
@@ -132,64 +132,14 @@
 							
 							
 						</div>
-					</div><!-- end of <div id="works"> -->
-					
-					
+					</div>
 						
 					<?php 
 					foreach($projects as $id => $project) {
 						?>
-						<div id="proj1" class="project">
-							<div class="container12">
-						
-								<div class="row">
-									<div class="column10">
-										<h3><?php echo $project['preview_name']; ?></h3>
-									</div>
-									<div class="column2">
-										<div class="allProjects sprite"></div>
-									</div>
-								</div>
-							
-								<div class="row">
-									<div class="column6 description">
-										<p><?php echo $project['project_description']; ?></p>
-										<p><a href="<?php echo $project['project_link_url']; ?>"><?php echo $project['project_link_text']; ?></a></p>
-										<ul class="skills">
-											<?php 
-											foreach($project['project_skills'] as $skill) { 
-												echo "<li>$skill</li>";
-											} ?>
-										</ul>
-									</div>
-									<div class="column6">
-										<div class="images">
-											<?php 
-												$imageSelectors = null;
-												$images = null;
-												$it = 1;
-												foreach($project['project_images'] as $image) { 
-													$images[] = '<img src="' . $image . '" id="gallery_image_' . $id . '_' . $it . '" class="gallery_image ' . ($it==1?'active':'') . '" />';
-													$imageSelectors[] = '<div id="selectors_img_' . $id . '_' . $it . '" class="selectors_img ' . ($it==1?'active':'') . '" data-id="' . $id . '" data-it="' . $it . '">' . $it . '</div>';
-													$it++;
-												} 
-												echo '<div class="gallery" id="gallery' . $id . '">' . implode($images) . '</div>';
-												echo '<div class="selectors" id="selectors' . $id . '"><div class="selectorsInner">' . implode($imageSelectors) . '</div></div>';
-											?>
-										</div>
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="column2">
-										<div class="lastProject sprite"></div>
-									</div>
-									<div class="column2 prefix8">
-										<div class="nextProject sprite"></div>
-									</div>
-								</div>
-								
-							</div>
+						<div id="proj<?php echo $id; ?>" class="project">
+							<img src="images/ajaxSpinner.gif" class="spinner"/>
+							<div class="projData"></div>
 						</div>
 							
 						<?php								
@@ -237,8 +187,8 @@
 								<h4>Contact</h4>
 								<p id="brit_phone_number" class="contact_info"></p>
 								<p id="brit_email" class="contact_info"></p>
-								<a href="http://www.linkedin.com/pub/brittany-kos/4a/983/638" class="social"><span id="sprite_linkedin" class="sprite"></span></a>
 								<a href="http://www.twitter.com/koscida" class="social"><span id="sprite_twitter" class="sprite"></span></a>
+								<a href="http://www.linkedin.com/pub/brittany-kos/4a/983/638" class="social"><span id="sprite_linkedin" class="sprite"></span></a>
 							</div>
 						</div>
 						
@@ -267,29 +217,30 @@
 								<p>Interested in working with us or getting a quote? Drop us a line.  We're currently open for contract 
 								work and are always interested in hearing from you.</p>
 								
-								<p>Or email us directly at kode@kodestudios.com
+								<p>Or you can email us directly at <span id="kode_email"></span>
 								</p>
 							</div>
 							
 							<div class="column6 prefix1">
-								<form>
+								<div id="emailTarget"></div>
+								<form id="emailForm">
 									<div class="inputWrapper">
-										<label>Name</label>
-										<input type="text" class="name" />
+										<label>Name*</label>
+										<input type="text" name="name" />
 									</div>
 									<div class="inputWrapper">
-										<label>Email</label>
-										<input type="text" class="email" />
+										<label>Email*</label>
+										<input type="text" name="email" />
 									</div>
 									<div class="inputWrapper">
-										<label>Message</label>
-										<textarea class="name"></textarea>
+										<label>Message*</label>
+										<textarea name="message"></textarea>
 									</div>
 									<div class="honeypotWrapper">
-										<input type="text" class="honeypotInput" autocomplete="off" placeholder="Leave this blank if you are human" />
+										<input type="text" class="honeypotInput" name="honeypot" autocomplete="off" placeholder="Leave this blank if you are human" />
 									</div>
 									<div class="inputWrapper">
-										<input type="submit" class="smBtn" value="Send" />
+										<input type="submit" class="smBtn" value="Send" id="sendEmail" />
 									</div>
 								</form>
 							</div>
@@ -311,8 +262,10 @@
 	</section>
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/jquery.form.min.js" type="text/javascript"></script>
+	<script src="js/ajaxSubmit.js" type="text/javascript"></script>
     <script src="js/common.js" type="text/javascript"></script>
-    <script src="js/tracking.js" type="text/javascript"></script>
+    <script src="js/tracking1.js" type="text/javascript"></script>
 
 </body>
 </html>
