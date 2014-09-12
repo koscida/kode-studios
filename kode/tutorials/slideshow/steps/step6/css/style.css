@@ -1,0 +1,24 @@
+/* ******************************************************** */
+/*		This css is just being used to style the page 		*/
+/*		and does not affect the slideshow					*/
+/* ******************************************************** */
+body, html {
+	padding: 0;
+	margin: 0;
+	background: #58C4B7;
+	font-family: helvetica, arial, sans-serif;
+}
+h1, h2 {
+	margin: 0;
+}
+
+#wrapper {
+	width: 800px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	background: #ffffff;
+}
+
+/* ******************************************************** */
+/*		End of css that does not affect the slideshow		*/
+/* ******************************************************** */

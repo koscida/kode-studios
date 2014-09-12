@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <link href="css/1140.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
     
     <?php 

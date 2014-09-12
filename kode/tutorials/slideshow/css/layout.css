@@ -1,0 +1,280 @@
+/*
+theme 2880017
+58C4B7 - green
+3A3F45 - dk grey
+5E6977 - med dk grey
+878F99 - med lt grey
+ACB6C1 - lt grey
+
+BF5CC9 - purple
+8968CE - purple
+6883CC - blue
+58C4B7 - green (teal)
+8FE969 - green
+DFF970 - yellow
+FFF072 - yellow
+
+
+7E6BCF
+6A7CCE
+6298C8
+58C4B7 - teal
+*/
+
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Open Sans Regular"), url('../media/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: light;
+	font-weight: 300;
+	src: local("Open Sans Light"), url('../media/OpenSans-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: bold;
+	font-weight: 700;
+	src: local("Open Sans Bold"), url('../media/OpenSans-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Voltaire';
+	font-style: normal;
+	font-weight: 400;
+	src: local("Voltaire Regular"), url('../media/Voltaire-Regular.ttf') format('truetype');
+}
+::selection {
+	background: #58C4B7; /* Safari */
+	}
+::-moz-selection {
+	background: #58C4B7; /* Firefox */
+}
+
+
+
+html, body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	line-height: 150%;
+	color: #3A3F45;
+	background: url('../images/connect.png');
+	background: url('../images/pixel_weave_1.png');
+	background: url('../images/p4.png');
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 7em;
+	line-height: 1.5em;
+	
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+h2 {
+	font-size: 3em;
+	line-height: 1.5em;
+	
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+h3 {
+	font-size: 2.3em;
+	line-height: 1.5em;
+}
+h4 {
+	font-size: 2em;
+	line-height: 1.5em;
+	color: #58C4B7;
+	font-weight: bold;
+	
+	text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.8);
+	-webkit-text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.8);
+	-moz-text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.8);
+}
+p {
+	margin-bottom: 20px;
+}
+p, label, input[type=text], .inputWrapper textarea {
+	font-family: 'Open Sans', sans-serif;
+	color: #3A3F45;
+	font-size: 1.25em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+	input[type=text], .inputWrapper textarea {
+		font-size: 1em;
+	}
+a {
+	text-decoration: none;
+	color: #38A497;
+	
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+a:hover {
+	text-transform: none;
+	text-decoration: underline;
+}
+ul {
+	padding-left: 20px;
+}
+li {
+	list-style-type: circle
+}
+
+
+.bold {
+	font-weight: bold;
+}
+.hide {
+	display: none;
+}
+.right {
+	float: right;
+}
+.left {
+	float: left;
+}
+.indent {
+	width: 20px;
+	display: inline-block;
+}
+
+
+header {
+	height: 40px;
+}
+#page {
+	height: 100%;
+	min-height: 100%;
+	margin-top: 40px;
+}
+
+
+
+.sprite {
+	background: url(../images/sprites.png);
+}
+.spinner {
+	margin: 100px auto 0 auto;
+	height: 100px;
+	width: 100px;
+	display: block;
+}
+
+.error, .success {
+	font-size: 1em;
+	margin-bottom: 3px;
+}
+.error {
+	color: #D54E56;
+}
+.success {
+	color: #48B497;
+}
+
+
+
+/* **************** */
+/*		inputs		*/
+/* **************** */
+.inputWrapper, .inputWrapper label, .inputWrapper input[type=text], .inputWrapper textarea {
+	width: 100%;
+}
+.inputWrapper {
+	margin-bottom: 10px;
+}
+label {
+	margin-bottom: 2px;
+}
+input[type=text], .inputWrapper textarea {
+	padding: 7px 10px;
+	border: 0;
+	
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.inputWrapper textarea {
+	height: 200px;
+}
+input[type=submit], .smBtn {
+	color: white;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	padding: 5px 18px 6px;
+	cursor: pointer;
+	font-size: 20px;
+	
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#58C4B7), to(#38A497));
+	background:-moz-linear-gradient(top, #58C4B7, #38A497);
+	
+	text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+	-webkit-text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+	-moz-text-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.smBtn:hover {
+	text-decoration: none;
+}
+.honeypotWrapper, .honeypotInput {
+	height: 0px;
+	overflow: hidden;
+}
+
+
+
+
+/* **************** */
+/*		header		*/
+/* **************** */
+header {
+	background: #3A3F45;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+
+
+
+/* ******************** */
+/*		home title		*/
+/* ******************** */
+#title {
+	font-family: 'Voltaire', sans-serif;
+	min-height: 100px;
+	font-weight: bold;
+	color: black;
+	
+	text-align: center;
+	background: #58C4B7;
+	background: url(../images/triangle_1.png);
+}
+#title p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
