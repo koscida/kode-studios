@@ -19,7 +19,7 @@ $(document).ready(function (){
 	$(".link").click(function() {
 		var index = $(this).index();
 		$('html, body').animate({
-			scrollTop: (sections[index])
+			scrollTop: (sections[(index-1)])
 		}, 1000);
 	});
 	

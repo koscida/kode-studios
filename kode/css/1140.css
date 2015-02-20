@@ -5,7 +5,7 @@
  * Version: 1.2 | 2015-01-25
  * 
  * License: Kode Studios Educational License Version 1.0 
- * License info: http://kodestudios.com/licenses/educational_v1-0.html
+ * License URI: http://kodestudios.com/licenses/educational_v1-0.html
  * 
  * Author: Kode Studios
  * Author URI: http://kodestudios.com
@@ -16,9 +16,10 @@
 
 
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* 
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
 */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object
 	{display:block}
@@ -28,7 +29,8 @@ figure
 	{position:relative}
 figure img
 	{width:100%}
-/* End resets
+/* 
+	End resets
 */
 	
 	

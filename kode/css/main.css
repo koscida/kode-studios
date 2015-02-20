@@ -3,6 +3,7 @@
 /* **************** */
 header .link div {
 	color: white;
+	font-size: 16px;
 	line-height: 40px;
 	display: block;
 	text-align: center;
@@ -37,49 +38,8 @@ header .active span:after {
 
 
 /* **************** */
-/*		body		*/
-/* **************** */
-#body {}
-.section {}
-#title, .section:nth-of-type(1) .head {
-	/* in layout.css
-	background: #58C4B7;
-	background: url(../images/triangle_1.png);
-	*/
-}
-.section:nth-of-type(2) .head {
-	background: #6298C8;
-	background: url(../images/triangle_2.png);
-}
-.section:nth-of-type(3) .head {
-	background: #6A7CCE;
-	background: url(../images/triangle_3.png);
-}
-.section:nth-of-type(4) .head {
-	background: #7E6BCF;
-	background: url(../images/triangle_4.png);
-}
-.head {
-	font-family: 'Voltaire', sans-serif;
-	min-height: 100px;
-	font-weight: bold;
-	color: black;
-}
-.head h2 {
-	line-height: 100px;
-}
-.content {
-	padding-top: 20px;
-}
-
-
-
-
-/* **************** */
 /*		home		*/
 /* **************** */
-#homeSection {}
-
 .process {}
 .process .sprite {
 	width: 110px;
@@ -100,7 +60,7 @@ header .active span:after {
 }
 .process p {
 	text-align: center;
-	font-size: 1em;
+	font-size: 0.8em;
 }
 
 
@@ -238,7 +198,6 @@ header .active span:after {
 /* **************** */
 /*		about		*/
 /* **************** */
-#aboutSection {}
 .self {
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
 	-moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
@@ -268,7 +227,6 @@ header .active span:after {
 /* **************** */
 /*		contact		*/
 /* **************** */
-#contactSection {}
 #emailTarget {
 	display: none;
 }

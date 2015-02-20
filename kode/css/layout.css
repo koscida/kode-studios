@@ -56,19 +56,16 @@ FFF072 - yellow
 
 
 html, body {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	line-height: 150%;
 	color: #3A3F45;
-	background: url('../images/connect.png');
-	background: url('../images/pixel_weave_1.png');
 	background: url('../images/p4.png');
 }
 
 h1 {
 	font-weight: bold;
-	font-size: 7em;
 	line-height: 1.5em;
 	
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
@@ -76,7 +73,7 @@ h1 {
 	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 h2 {
-	font-size: 3em;
+	font-size: 2.4em;
 	line-height: 1.5em;
 	
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
@@ -84,11 +81,11 @@ h2 {
 	-moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 h3 {
-	font-size: 2.3em;
+	font-size: 1.8em;
 	line-height: 1.5em;
 }
 h4 {
-	font-size: 2em;
+	font-size: 1.6em;
 	line-height: 1.5em;
 	color: #58C4B7;
 	font-weight: bold;
@@ -103,7 +100,6 @@ p {
 p, label, input[type=text], textarea {
 	font-family: 'Open Sans', sans-serif;
 	color: #3A3F45;
-	font-size: 1.25em;
 	font-weight: 300;
 	line-height: 1.5em;
 }
@@ -255,15 +251,46 @@ header {
 
 
 
-/* ******************** */
-/*		home title		*/
-/* ******************** */
-#title {
+/* **************** */
+/*		body		*/
+/* **************** */
+.section:nth-of-type(1) .head {
+	background-color: #58C4B7;
+	background-image: url(../images/triangle_1.png);
+}
+.section:nth-of-type(2) .head {
+	background-color: #6298C8;
+	background-image: url(../images/triangle_2.png);
+}
+.section:nth-of-type(3) .head {
+	background-color: #6A7CCE;
+	background-image: url(../images/triangle_3.png);
+}
+.section:nth-of-type(4) .head {
+	background-color: #7E6BCF;
+	background-image: url(../images/triangle_4.png);
+}
+.head {
+	font-family: 'Voltaire', sans-serif;
+	min-height: 50px;
+	font-weight: bold;
+	color: black;
+}
+.head h2 { padding: 15px 0; }
+.content {
+	padding-top: 20px;
+}
+
+.title {
 	text-align: center;
-	background: #58C4B7;
-	background: url(../images/triangle_1.png);
 }
-#title p {
-	font-size: 1.5em;
-	line-height: 1.5em;
+.title h1 {
+	font-size: 5.6em;
 }
+.title p {
+	font-size: 1.2em;
+}
+.titleSm h1 {
+	font-size: 3em;
+}
+
